@@ -1,9 +1,9 @@
-///////////////////////////////////////
+////////////////
 /// 640x480 version!
 /// test VGA with hardware video input copy to VGA
 // compile with
 // gcc fp_test_1.c -o fp1 -lm
-///////////////////////////////////////
+///////////////
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -49,17 +49,18 @@ int fd;
 int main(void)
 {
 
-	// Declare volatile pointers to I/O registers (volatile 	// means that IO load and store instructions will be used 	// to access these pointer locations, 
+	// Declare volatile pointers to I/O registers (volatile    // means that IO load and store instructions will be used 	// to access these pointer locations, 
 	// instead of regular memory loads and stores) 
   	
-	// === need to mmap: =======================
+	// === need to mmap: ===============
 	// FPGA_CHAR_BASE
 	// FPGA_ONCHIP_BASE      
 	// HW_REGS_BASE        
   
-	// === get FPGA addresses ==================
+	// === get FPGA addresses ============
     // Open /dev/mem
-	if( ( fd = open( "/dev/mem", ( O_RDWR | O_SYNC ) ) ) == -1 ) 	{
+	if( ( fd = open( "/dev/mem", ( O_RDWR | O_SYNC ) ) ) == -1 ) 	
+	{
 		printf( "ERROR: could not open \"/dev/mem\"...\n" );
 		return( 1 );
 	}
@@ -69,7 +70,8 @@ int main(void)
 	// for light weight bus
 	// FIFO status registers
 	h2p_lw_virtual_base = mmap( NULL, HW_REGS_SPAN, ( PROT_READ | PROT_WRITE ), MAP_SHARED, fd, HW_REGS_BASE );	
-	if( h2p_lw_virtual_base == MAP_FAILED ) {
+	if( h2p_lw_virtual_base == MAP_FAILED ) 
+	{
 		printf( "ERROR: mmap1() failed...\n" );
 		close( fd );
 		return(1);
@@ -81,7 +83,8 @@ int main(void)
 	// scratch RAM FPGA parameter addr 
 	sram_virtual_base = mmap( NULL, FPGA_ONCHIP_SPAN, ( PROT_READ | PROT_WRITE ), MAP_SHARED, fd, FPGA_ONCHIP_BASE); 	
 	
-	if( sram_virtual_base == MAP_FAILED ) {
+	if( sram_virtual_base == MAP_FAILED )
+	{
 		printf( "ERROR: mmap3() failed...\n" );
 		close( fd );
 		return(1);
@@ -94,7 +97,8 @@ int main(void)
 	// FIFO write addr 
 	h2p_virtual_base = mmap( NULL, FIFO_SPAN, ( PROT_READ | PROT_WRITE ), MAP_SHARED, fd, FIFO_BASE); 	
 	
-	if( h2p_virtual_base == MAP_FAILED ) {
+	if( h2p_virtual_base == MAP_FAILED )
+	{
 		printf( "ERROR: mmap3() failed...\n" );
 		close( fd );
 		return(1);
@@ -102,7 +106,7 @@ int main(void)
     // Get the address that maps to the FIFO
 	FIFO_write_ptr =(unsigned int *)(h2p_virtual_base);
 	
-	//============================================
+	//============================
 	
 	
 	while(1) 
@@ -127,5 +131,5 @@ int main(void)
 	} // end while(1)
 } // end main
 
-/// /// ///////////////////////////////////// 
-/// end /////////////////////////////////////
+/// /// ///////////////// 
+/// end /////////////////

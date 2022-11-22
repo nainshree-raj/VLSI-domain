@@ -19,6 +19,8 @@ ultimate design flexibility)<br>
 <br>
 --> Results :
 <br>
+![](https://github.com/nainshree-raj/VLSI-domain/blob/main/Screenshot%20(19).png)
+<br>
 ![]()
 <br>
 ![]()

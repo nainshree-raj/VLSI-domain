@@ -16,3 +16,13 @@ ultimate design flexibility)<br>
 • SDMMC card preloaded with default GSRD image
 <br>
 ![](https://github.com/nainshree-raj/VLSI-domain/blob/main/Block%20diagram.png)
+<br>
+--> Results :
+<br>
+![]()
+<br>
+![]()
+<br>
+--> Applications :
+<br>
+![]()

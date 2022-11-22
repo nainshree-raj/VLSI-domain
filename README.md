@@ -15,4 +15,4 @@ combines the latest dual-core Cortex-A9 embedded cores with industry-leading pro
 ultimate design flexibility)<br>
 • SDMMC card preloaded with default GSRD image
 <br>
-![](https://drive.google.com/file/d/1_CizNyXUAKgEaGZkl1aN4OWHvKWZoa4j/view?usp=sharing)
+![](https://github.com/nainshree-raj/VLSI-domain/blob/main/Block%20diagram.png)

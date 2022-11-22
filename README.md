@@ -1,11 +1,12 @@
 # VLSI-domain
                                                          Interfacing of FPGA &amp; HPS on DE1-SoC.
 
-
-
+--> The objective 
+Data is written sequentially into the FIFO and read sequentially such that the first 
+data written is the first data read out and so on with the remaining sequential data.
 
 --> TOOLS USED (SOFTWARE /HARDWARE)
-• Linux,
+• Linux
 • PuTTy software
 • Quartus Prime (Use Qsys (recently rebranded as Platform Designer) to instantiate and connect HPS 
 components)

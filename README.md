@@ -25,4 +25,4 @@ ultimate design flexibility)<br>
 <br>
 --> Applications :
 <br>
-![]()
+![](https://github.com/nainshree-raj/VLSI-domain/blob/main/Screenshot%20(18).png)
